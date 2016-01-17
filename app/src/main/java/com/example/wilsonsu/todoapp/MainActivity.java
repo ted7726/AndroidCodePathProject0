@@ -183,10 +183,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String getDefaultDate() {
-//        Date date = new Date();
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
-//        return sdf.format(date);
-        return "2015/12/31";
+        return "2016/01/01";
     }
 
 

@@ -30,9 +30,6 @@ public class EditItemActivity extends AppCompatActivity implements EditItemDialo
         R.color.colorPriorityLow,
     };
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,11 +53,12 @@ public class EditItemActivity extends AppCompatActivity implements EditItemDialo
         tvDate.setText(date);
 
         // setup dropdown list
-        spinner.setSelection(selectedPriority);
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.priority_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+        spinner.setSelection(selectedPriority);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
